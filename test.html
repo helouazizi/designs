@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Post</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .post-container {
+            width: 50%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .post-time {
+            color: gray;
+            font-size: 0.9em;
+        }
+        .post-categories, .post-content {
+            margin: 10px 0;
+        }
+        .post-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        .likes, .dislikes, .comments {
+            display: flex;
+            align-items: center;
+        }
+        .likes span, .dislikes span, .comments span {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="post-container">
+        <div class="profile">
+            <img src="profile-pic-url.jpg" alt="Profile Picture">
+            <div class="profile-info">
+                <span class="username">User Name</span>
+                <span class="post-time">Time</span>
+            </div>
+        </div>
+        <div class="post-categories">
+            Categories: <span class="category">Category 1</span>, <span class="category">Category 2</span>
+        </div>
+        <div class="post-title">
+            <h2>Post Title</h2>
+        </div>
+        <div class="post-content">
+            <p>Post content goes here...</p>
+        </div>
+        <div class="post-actions">
+            <div class="likes">
+                <button>Like</button><span>123</span>
+            </div>
+            <div class="dislikes">
+                <button>Dislike</button><span>12</span>
+            </div>
+            <div class="comments">
+                <button>Comment</button><span>Comments (45)</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
