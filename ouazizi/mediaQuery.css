@@ -38,6 +38,13 @@
     p {
         font-size: small;
     }
+    h2 {
+        font-size: medium;
+        text-align: center;
+    }
+    h3 {
+        font-size: medium;
+    }
 
 
  }
