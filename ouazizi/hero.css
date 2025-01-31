@@ -1,0 +1,30 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    height: 80dvh;
+    background-color: rgba(97, 97, 97, 0);
+    padding: 10px; ;
+}
+
+
+.intro .fast-links {
+    margin-top: 10%;
+}
+
+.social-links {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.social-links a i {
+    font-size: x-large;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+  }
