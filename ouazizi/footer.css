@@ -1,0 +1,27 @@
+.footer {
+    color: #fff;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.up-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 228, 196, 0);
+}
+
+.social-media a {
+    color: var(--primary-color);
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+
+.copyright {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
