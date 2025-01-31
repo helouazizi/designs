@@ -1,12 +1,13 @@
  /* Media query for devices with a max width of 768px */
  @media (max-width: 768px) {
-    .logo {
-        font-size: large;
-    }
+     .logo {
+         font-size: large;
+     }
+
      .nav-links {
          display: none;
          flex-direction: column;
-         padding: 10px 0px ;
+         padding: 10px 0px;
          gap: 20px;
          width: 96%;
          text-align: center;
@@ -21,6 +22,19 @@
      .burger {
          display: block;
      }
+
+     .btn {
+         display: inline-block;
+         padding: 5px 10px;
+         font-size: small;
+         color: #fff;
+         background-color: #333;
+         text-decoration: none;
+         border-radius: 5px;
+     }
+     .social-links a i {
+        font-size:large;
+    }
 
 
  }
