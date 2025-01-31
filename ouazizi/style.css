@@ -1,4 +1,6 @@
 @import url("header.css");
+@import url("hero.css");
+@import url("test.css");
 @import url("mediaQuery.css");
 
 :root {
