@@ -7,23 +7,21 @@ document.querySelector('.burger').addEventListener('click', function() {
     }
 });
 /////////////////////////////////////////////////////////////
-const carouselItems = document.querySelectorAll('.carousel-item');
-const dots = document.querySelectorAll('.dot');
 let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
 
-function updateCarousel(index) {
-  carouselItems.forEach((item, i) => {
-    item.classList.toggle('active', i === index);
-    dots[i].classList.toggle('active', i === index);
-  });
-}
-
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    currentIndex = index;
-    updateCarousel(currentIndex);
-  });
+document.querySelector('.next').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % totalItems;
+  updateCarousel();
 });
 
-// Initialize the carousel
-updateCarousel(currentIndex);
+document.querySelector('.prev').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+  updateCarousel();
+});
+
+function updateCarousel() {
+  const offset = -currentIndex * (items[0].offsetWidth + 30); // Adjust for margin
+  document.querySelector('.carousel').style.transform = `translateX(${offset}px)`;
+}
