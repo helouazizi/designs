@@ -1,53 +1,34 @@
 .best-projects {
-    padding: 40px;
-    text-align: center;
-    background-color: #7e767600;
-  }
-  
-  .carousel {
-    position: relative;
-    overflow: hidden;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  
-  .carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-    display: none; /* Hide all items by default */
-  }
-  
-  .carousel-item.active {
-    display: block; /* Show the active item */
-  }
-  
-  .project-card {
-    background: #3d3a3a;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .carousel-dots {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .dot {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .dot.active {
-    background-color: #333;
-  }
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+}
+
+.carousel-item {
+  min-width: 300px;
+  margin: 0 15px;
+
+  transition: transform 0.5s ease;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 400px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+
