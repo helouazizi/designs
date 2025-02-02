@@ -1,411 +1,167 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #E0E0E0;
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
-}
-
-a {
-    text-decoration: none;
-    color: #b1adad;
-
-}
-
-
-
-header {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    margin: 10px 5%;
-    background-color: rgba(32, 35, 35, 0);
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 1px 1px 10px slategray;
-
-    .sign-in {
-        padding: 5px 15px;
-        background-color: #75b375;
-        border: none;
-        border-radius: 2px;
-        font-weight: 700;
-
-        a {
-            color: #121212;
-        }
-    }
-
-    .sign-up {
-        padding: 5px 15px;
-        /* background-color: #36533c; */
-        background-color: transparent;
-        border: 1px solid #0080007d;
-        border-radius: 2px;
-        font-weight: 700;
-
-        a {
-            color: rgba(255, 255, 255, 0.656);
-        }
-    }
-
-
-}
-
-main {
-    height: 80vh;
-    background-color: rgba(255, 99, 71, 0);
+  }
+  
+  header nav ul {
+    list-style: none;
     display: flex;
-    justify-content: space-evenly;
-    margin: 50px 5%;
-
-}
-
-aside {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-
-
-    a {
-        display: block;
-        /* margin: 20px 0px;*/
-        color: rgba(255, 255, 255, 0.648);
-        padding: 8px 0px;
-    }
-
-    i {
-        background-color: #75b375;
-        padding: 10px;
-        border-radius: 50%;
-        color: #E0E0E0;
-    }
-
-}
-
-/*------------------------------------------------------*/
-.resent-post {
-    color: #635757;
-}
-
-.container {
-    padding: 20px;
-    width: 80%;
-    background-color: rgba(60, 89, 89, 0);
-    max-height: 80vh;
-    /* Set a maximum height for the container */
-    overflow-y: auto;
-
-}
-
-.container::-webkit-scrollbar {
-    display: none;
-    /* Hide the scrollbar */
-    color: transparent;
-}
-
-body::-webkit-scrollbar {
-    display: none;
-    /* Hide the scrollbar */
-}
-
-
-.post-container {
-    background-color: #0000001a;
-    /* border: 1px solid #e0e0e0; */
-    border-radius: 8px;
+  }
+  
+  header nav ul li {
+    margin-right: 20px;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .profile {
+    text-align: center;
+  }
+  
+  .profile img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+  }
+  
+  h1 {
+    margin-top: 10px;
+    font-size: 32px;
+  }
+  
+  h2, h3 {
+    color: #333;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 60px 0;
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  ul {
+    list-style-type: square;
+    margin-left: 20px;
+  }
+  
+  /* Projects Section */
+  .projects {
+    padding: 60px 0;
+  }
+  
+  .project-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
     padding: 20px;
     margin: 20px 0;
-    box-shadow: 1px 1px 10px dimgrey;
-    transition: transform 0.2s;
-}
-
-.post-container:hover {
-    transform: scale(1.02);
-    /* Slightly scale up on hover */
-}
-
-.profile {
-    display: flex;
-    /* Use flexbox for layout */
-    align-items: center;
-    /* Center items vertically */
-
-    /* Space below the profile */
-}
-
-.profile img {
-    width: 40px;
-    /* Set a fixed width for the profile picture */
-    height: 40px;
-    /* Set a fixed height for the profile picture */
-    border-radius: 50%;
-    /* Make the profile picture circular */
-    margin-right: 10px;
-    /* Space between image and text */
-    border: 3px solid rgb(81, 188, 81);
-}
-
-.profile-info {
+    border-radius: 8px;
+  }
+  
+  .project-card a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  /* Contact Section */
+  .contact {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .contact form {
     display: flex;
     flex-direction: column;
-    /* Stack username and time vertically */
-}
-
-.username {
-    font-weight: bold;
-    /* Bold username */
-    color: #333;
-    /* Dark gray color for the username */
-}
-
-.post-time {
-    font-size: 12px;
-    /* Smaller font size for the time */
-    color: #888;
-    /* Light gray color for the time */
-}
-
-.post-categories {
-    font-size: 14px;
-    /* Font size for categories */
-    color: #555;
-    /* Medium gray color for categories */
-    margin: 10px 0px;
-    /* Space below categories */
-}
-
-.category {
-    background-color: #e0f7fa;
-    /* Light blue background for categories */
-    border-radius: 4px;
-    /* Rounded corners for categories */
-    padding: 2px 5px;
-    /* Padding inside category */
-    margin-right: 5px;
-    /* Space between categories */
-}
-
-.post-title h2 {
-    font-size: 24px;
-    /* Title font size */
-    color: #333;
-    /* Dark gray color for the title */
-    margin: 10px 0;
-    /* Space above and below the title */
-}
-
-.post-content {
-    font-size: 16px;
-    /* Content font size */
-    color: #555;
-    /* Medium gray color for the content */
-    line-height: 1.5;
-    /* Line height for better readability */
-    margin-bottom: 15px;
-    /* Space below the content */
-}
-
-.post-actions {
-    display: flex;
-    /* Use flexbox for layout */
-    justify-content: space-between;
-    /* Space out the action buttons */
-}
-
-.post-actions div {
-    display: flex;
-    /* Use flexbox for layout */
-    align-items: center;
-    /* Center items vertically */
-}
-
-button {
-    background-color: transparent;
-    /* Blue background for buttons */
-    color: rgba(255, 255, 255, 0.655);
-    /* White text color for buttons */
-    border: none;
-    /* Remove border */
-    border-radius: 4px;
-    /* Rounded corners for buttons */
-    padding: 5px 10px;
-    /* Padding inside buttons */
-    cursor: pointer;
-    /* Change cursor to pointer on hover */
-    margin-right: 5px;
-    /* Space between button and count */
-    transition: background-color 0.3s;
-    /* Smooth background color transition */
-}
-
-button:hover {
-    background-color: #5c7e4c;
-    /* Darker blue on hover */
-}
-
-span {
-    font-size: 14px;
-    /* Font size for counts */
-    color: #333;
-    /* Dark gray color for counts */
-}
-
-.comment-section {
-    display: flex;
-    /* align-items: center; */
-    justify-content: unset;
-    background-color: rgba(240, 248, 255, 0);
-    padding: 5px;
-
-    /* Space above the comment section */
-}
-
-.comment-input {
-    flex: 1;
-    padding: 10px;
-    margin-right: 10px;
-    border-radius: 4px;
-    font-size: 14px;
-border: none;
-    background-color: #312c2cb5;
-}
-
-.comment-input:focus {
-    border-color: #007bff;
-    /* Change border color on focus */
-    outline: none;
-    /* Remove default outline */
-}
-
-.submit-comment {
-    background-color: #007bff;
-    /* Blue background for the button */
-    color: white;
-    /* White text color for the button */
-    border: none;
-    /* Remove border */
-    border-radius: 4px;
-    /* Rounded corners for the button */
-
-    /* Padding inside the button */
-    cursor: pointer;
-    /* Change cursor to pointer on hover */
-    transition: background-color 0.3s;
-    /* Smooth background color transition */
-}
-
-.submit-comment:hover {
-    background-color: #539d65;
-    /* Darker blue on hover */
-}
-
-/*-------------------------------------------------------------------------------------*/
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1E1E1E;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-@media (max-width : 768px) {
-    main {
-        background-color: #e0e0e000;
-        display: block;
-        margin-bottom: 100px;
-
-        .form-container {
-            width: 90%;
-            background-color: rgba(176, 144, 105, 0);
-        }
-    }
-
-    aside {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-
-        a {
-            display: flex;
-            align-items: center;
-            background-color: #12121200;
-        }
-
-        justify-content: space-evenly;
-        align-items: center;
-        background-color: rgba(189, 115, 25, 0);
-    }
-
-    .container {
-        background-color: #0057b300;
-        width: 94%;
-
-        .post-container {
-            width: 93%;
-        }
-    }
-
-}
-
-/*----------------------------------------------------------*/
-.form-container {
-    background-color: rgb(23, 26, 26);
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 1px 1px 10px slategray;
-    width: 50%;
-    text-align: center;
-    height: fit-content;
-}
-
-h2 {
+  }
+  
+  .contact label {
+    margin-bottom: 5px;
+  }
+  
+  .contact input, .contact textarea {
     margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    text-align: left;
-}
-
-.form-container {
-
-    input[type="email"],
-    input[type="password"],
-    input[type="text"] {
-        width: 95%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border: none;
-        border-radius: 4px;
-        background-color: #333;
-        color: #E0E0E0;
-    }
-}
-
-button.btn {
-    background-color: #75b375;
-    color: #121212;
     padding: 10px;
-    border: none;
+    font-size: 1rem;
+    border: 1px solid #ccc;
     border-radius: 4px;
+  }
+  
+  .contact button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
     cursor: pointer;
-    width: 98%;
-}
-
-button.btn:hover {
-    background-color: #57a957;
-}
-
-p a {
-    color: rgba(255, 255, 255, 0.656);
-}
-
-p a:hover {
-    text-decoration: underline;
-}
+  }
+  
+  .contact button:hover {
+    background-color: #555;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer .social-links a {
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  footer .social-links a:hover {
+    color: #007bff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    .container {
+      width: 100%;
+    }
+  }
+  
