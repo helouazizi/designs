@@ -1,34 +1,28 @@
 .best-projects {
-  text-align: center;
+  padding: 50px 5%;
+  text-align: start;
+  background-color: rgb(82, 87, 87);
 }
 
-.carousel {
+
+.projects-container {
   display: flex;
-  overflow: hidden;
-  position: relative;
-  justify-content: center;
+  gap: 20px;
+  justify-content: start;
+
+ 
 }
 
-.carousel-item {
-  min-width: 300px;
-  margin: 0 15px;
-
-  transition: transform 0.5s ease;
-}
-
-.card {
-  border: 1px solid #ddd;
-  padding: 20px;
-  text-align: center;
+.project-card {
+  width: 300px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1%;
+  background: #fff;
+  color: #555;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  height: 400px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
 }
-
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-
