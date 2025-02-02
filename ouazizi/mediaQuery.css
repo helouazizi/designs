@@ -48,6 +48,9 @@
     i {
         font-size: medium;
     }
+    .best-projects , .education {
+        margin: 0px;
+    }
 
 
  }
