@@ -52,5 +52,22 @@
         margin: 0px;
     }
 
+    .best-projects .projects-container {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+      }
+    
+      .best-projects .project-card {
+        background: #fff;
+        padding: 1rem;
+        color: #000;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        min-width: 100%;
+        flex: 1 0 ;
+        scroll-snap-align: center;
+      }
+
 
  }
