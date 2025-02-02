@@ -3,10 +3,15 @@
     justify-content: center;
     height: 60dvh;
     background-color: rgba(97, 97, 97, 0);
-    padding: 10px;
+    padding: 5%;
    
 }
-
+.name {
+    font-size: clamp(1.5rem, 5vw, 4rem); 
+}
+.intro {
+    text-align: center;
+}
 
 .intro .fast-links {
     margin-top: 10%;
