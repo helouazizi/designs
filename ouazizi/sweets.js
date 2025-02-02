@@ -7,21 +7,32 @@ document.querySelector('.burger').addEventListener('click', function() {
     }
 });
 /////////////////////////////////////////////////////////////
-let currentIndex = 0;
-const items = document.querySelectorAll('.carousel-item');
-const totalItems = items.length;
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.querySelector('.best-projects .projects-container');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
 
-document.querySelector('.next').addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % totalItems;
-  updateCarousel();
+  carousel.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+  });
+
+  carousel.addEventListener('mouseleave', () => {
+    isDown = false;
+  });
+
+  carousel.addEventListener('mouseup', () => {
+    isDown = false;
+  });
+
+  carousel.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    carousel.scrollLeft = scrollLeft - walk;
+  });
 });
 
-document.querySelector('.prev').addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-  updateCarousel();
-});
-
-function updateCarousel() {
-  const offset = -currentIndex * (items[0].offsetWidth + 30); // Adjust for margin
-  document.querySelector('.carousel').style.transform = `translateX(${offset}px)`;
-}
