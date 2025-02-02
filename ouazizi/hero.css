@@ -23,7 +23,8 @@
 .social-links {
     margin-top: 10%;
     display: flex;
-    justify-content: space-evenly;
+    gap: 20px;
+    justify-content:center;
 }
 
 .social-links a i {
