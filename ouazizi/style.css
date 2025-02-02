@@ -49,5 +49,9 @@ a {
 a:hover {
     color: var(--accent-color);
 }
+.btn {
+      
+    margin: 10px 0px;
+}
 
 
